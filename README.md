@@ -19,6 +19,8 @@ Ans: At the end of the  CNN model we get the output in a 2D or 3D format, but ou
 - What is data augmentation? <br>
 Ans: Creating mutilple images from already exisiting image by performing some operations like shifting, rotating, transforming etc. Why is this useful? - Because in real world getting labelled data is very expensive, so even if we have less data we can use this technique to increase our data size. <br>
 
+Training: <br>
+The model was overfitting at the beginning, so I did some hyperparameter tuning: I added another convolution layer and increased the dropout rate to 0.5. Making these changes solved the problem.
 
 ### Challenges I faced when working with Git in this project:
 
