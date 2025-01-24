@@ -3,19 +3,21 @@
 This repo contains the code for the fashion MNIST dataset.
 
 Some questions that popped in my mind when I started working with CNN<br>
-- input_shape of images like image width and height?<br>
-ans: if the image is greyscale then we have 1 colour channel, if the image is coloured, then we have 3 coloured channels - which are Red, Green, Blue.<br>
+- Input_shape of images like image width and height?<br>
+ans: If the image is greyscale then we have 1 colour channel, if the image is coloured, then we have 3 coloured channels - which are Red, Green, Blue.<br>
 - Does the CNN only accept the fixed input shapes?<br>
-ans: Yes, it accepts only fixed input sizes. why?<br>
-- what is pooling?<br>
-Ans: Downsampling the feature map.<br>
-- what is max pooling?<br>
-Ans: From the feature map, considering the window size and stride size. As, we move through the windows, we pick the maximum number in each window. <br>
-- why should we use pooling?<br>
-Ans: the advantages of pooling are reduced computational cost and translation invariance<br>
-- why should we flatten out the tensors and use dense layers?<br>
-Ans: As the output is a classification problem, we<br>
-- why should we use softmax for multiclass classification and cross entropy loss?<br>
+ans: Yes, it accepts only fixed input sizes. why? - The convolutional and pooling layers depend on fixed spatial dimensions to calculate feature maps and propagate through the network.<br>
+- What is pooling?<br>
+Ans: Downsampling the feature map(reduces the dimensions of the image). By feature map, we mean the output obtained by multiplying the image pixels by filter(matrix of weights)(this is also known as convolution). For demo, check this out https://deeplizard.com/resource/pavq7noze2 <br>
+- What is max pooling?<br>
+Ans: From the feature map, considering the window size and stride size. As, we move through the windows, we pick the maximum number in each window.(reduces the dimension of image by capturing the high level details.) <br>
+- Why should we use pooling?<br>
+Ans: The advantages of pooling are reduced computational cost(since the dimensions of the image are reduced) and translation invariance(Identifying features become location independent - meaning the model can capture the eyes of cat independent of its location(placement) in the image. <br>
+- Why should we flatten out the tensors and use dense layers?<br>
+Ans: At the end of the  CNN model we get the output in a 2D or 3D format, but our output is a scalar(1D). So, to get the desired output we flatten out the output add dense layers and the output layer along with respective activation function. <br>
+- Why should we use softmax for multiclass classification and cross entropy loss?<br>
+- What is data augmentation? <br>
+Ans: Creating mutilple images from already exisiting image by performing some operations like shifting, rotating, transforming etc. Why is this useful? - Because in real world getting labelled data is very expensive, so even if we have less data we can use this technique to increase our data size. <br>
 
 
 ### Challenges I faced when working with Git in this project:
