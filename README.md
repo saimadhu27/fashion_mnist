@@ -1,6 +1,6 @@
 ## Fashion_mnist
 
-This repo contains the code for the fashion MNIST dataset.
+This repo contains the code for the fashion MNIST dataset. Link for the data on kaggle : https://www.kaggle.com/datasets/zalando-research/fashionmnist <br>
 
 Some questions that popped in my mind when I started working with CNN<br>
 - Input_shape of images like image width and height?<br>
