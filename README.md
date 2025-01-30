@@ -15,7 +15,10 @@ Ans: From the feature map, considering the window size and stride size. As, we m
 Ans: The advantages of pooling are reduced computational cost(since the dimensions of the image are reduced) and translation invariance(Identifying features become location independent - meaning the model can capture the eyes of cat independent of its location(placement) in the image. <br>
 - Why should we flatten out the tensors and use dense layers?<br>
 Ans: At the end of the  CNN model we get the output in a 2D or 3D format, but our output is a scalar(1D). So, to get the desired output we flatten out the output add dense layers and the output layer along with respective activation function. <br>
-- Why should we use softmax for multiclass classification and cross entropy loss?<br>
+- Why should we use softmax for multiclass classification and categorical cross entropy loss?<br>
+Ans : Softmax converts raw logits (unnormalized scores) into probabilities that sum to 1, making it suitable for multiclass classification. Why BCE(Binary Cross Entropy) Fails for Multiclass? - BCE treats each class independently, which is incorrect for mutually exclusive classes.
+Example: <br>
+BCE might predict [0.8, 0.6, 0.3] for three classes. This doesn't make sense because the sum is not 1, and two classes (0 and 1) both have high probabilities. <br>
 - What is data augmentation? <br>
 Ans: Creating mutilple images from already exisiting image by performing some operations like shifting, rotating, transforming etc. Why is this useful? - Because in real world getting labelled data is very expensive, so even if we have less data we can use this technique to increase our data size. <br>
 
